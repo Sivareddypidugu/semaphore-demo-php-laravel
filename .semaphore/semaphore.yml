@@ -22,10 +22,10 @@ blocks:
       jobs:
         - name: phpmd
           commands:
-            - echo "phpmd"
+            - php vendor/bin/phpmd app/ text phpmd_ruleset.xml
         - name: phpcs
           commands:
-            - echo"phpcd"
+            - echo "phpcd"
         - name: phpcpd
           commands:
             - echo "phpcpd"
