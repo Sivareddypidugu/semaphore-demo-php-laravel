@@ -12,3 +12,4 @@ blocks:
           commands:
             - checkout
             - cache restore
+            - composer install
