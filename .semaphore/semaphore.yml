@@ -17,3 +17,15 @@ blocks:
             - cache store
             - cp .env.example .env
             - 'php artisan key:generate'
+  - name: Run Code Analysis
+    task:
+      jobs:
+        - name: phpmd
+          commands:
+            - echo "phpmd"
+        - name: phpcs
+          commands:
+            - echo"phpcd"
+        - name: phpcpd
+          commands:
+            - echo "phpcpd"
