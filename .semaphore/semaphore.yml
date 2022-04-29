@@ -17,6 +17,9 @@ blocks:
             - cache store
             - cp .env.example .env
             - 'php artisan key:generate'
+      env_vars:
+        - name: APP_NEW
+          value: prod
   - name: Run Code Analysis
     task:
       jobs:
