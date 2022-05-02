@@ -80,6 +80,17 @@ blocks:
       prologue:
         commands:
           - cache restore
+  - name: Build app
+    task:
+      jobs:
+        - name: Tests
+          commands:
+            - make test
+      epilogue:
+        always:
+          commands:
+            - artifact push job logs/test.log
+            - artifact push job screenshots
 promotions:
   - name: Production Deployment
     pipeline_file: pipeline_2.yml
