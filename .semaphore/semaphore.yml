@@ -49,3 +49,4 @@ blocks:
           commands:
             - 'checkout '
             - 'cache restore '
+            - ./vendor/bin/phpunit
