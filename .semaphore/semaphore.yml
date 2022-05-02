@@ -33,6 +33,7 @@ blocks:
         - name: phpcpd
           commands:
             - 'curl -L https://phar.phpunit.de/phpcpd.phar -o phpcpd.phar'
+            - php phpcpd.phar app/ --min-lines=50
       prologue:
         commands:
           - checkout
