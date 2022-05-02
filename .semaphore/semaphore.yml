@@ -82,7 +82,7 @@ blocks:
           - cache restore
   - name: Build app
     dependencies:
-      - Run Security Tests
+      - Install Dependencies
     task:
       epilogue:
         always:
