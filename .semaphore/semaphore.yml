@@ -77,3 +77,6 @@ blocks:
             - cd security-checker
             - composer install
             - 'php security-checker security:check ../composer.lock'
+      prologue:
+        commands:
+          - cache restore
