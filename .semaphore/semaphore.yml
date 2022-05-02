@@ -20,6 +20,7 @@ blocks:
       env_vars:
         - name: APP_NEW
           value: prod
+    dependencies: []
   - name: Run Code Analysis
     task:
       jobs:
@@ -36,3 +37,14 @@ blocks:
         commands:
           - checkout
           - cache restore
+    dependencies:
+      - Install Dependencies
+  - name: Run Unit Test
+    dependencies:
+      - Run Code Analysis
+    task:
+      jobs:
+        - name: pdpunit
+          commands:
+            - 'checkout '
+            - 'cache restore '
