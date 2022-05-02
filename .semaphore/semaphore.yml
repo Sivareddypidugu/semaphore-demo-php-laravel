@@ -50,3 +50,14 @@ blocks:
             - 'checkout '
             - 'cache restore '
             - ./vendor/bin/phpunit
+  - name: Run browser tests
+    dependencies:
+      - Run Unit Test
+    task:
+      jobs:
+        - name: laravel desk
+          commands:
+            - checkout
+            - cp .env.example .env
+            - touch database/database.sqlite
+            - cache restore
