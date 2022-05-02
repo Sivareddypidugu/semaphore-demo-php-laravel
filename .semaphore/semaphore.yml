@@ -31,7 +31,7 @@ blocks:
             - php vendor/bin/phpcs app --report-full --standard=PSR2
         - name: phpcpd
           commands:
-            - echo "phpcpd"
+            - 'curl -L https://phar.phpunit.de/phpcpd.phar -o phpcpd.phar'
       prologue:
         commands:
           - checkout
