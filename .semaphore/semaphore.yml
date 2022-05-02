@@ -65,3 +65,15 @@ blocks:
             - 'php artisan dusk:update --detect'
             - php artisan serve --env=dusk.local --port=8010 &
             - php artisan dusk
+  - name: Run Security Tests
+    dependencies:
+      - Run browser tests
+    task:
+      jobs:
+        - name: Sensiolabs
+          commands:
+            - checkout
+            - 'git clone https://github.com/sensiolabs/security-checker.git'
+            - cd security-checker
+            - composer install
+            - 'php security-checker security:check ../composer.lock'
