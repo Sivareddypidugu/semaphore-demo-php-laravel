@@ -73,10 +73,11 @@ blocks:
         - name: Sensiolabs
           commands:
             - checkout
+            - 'cache restore '
             - 'git clone https://github.com/sensiolabs/security-checker.git'
             - cd security-checker
             - composer install
-            - 'php security-checker security: check ../composer.Lock'
+            - 'php security-checker security:check ../composer.Lock'
       prologue:
         commands:
           - cache restore
