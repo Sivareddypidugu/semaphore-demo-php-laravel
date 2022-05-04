@@ -92,7 +92,7 @@ blocks:
       jobs:
         - name: tests
           commands:
-            - make test
+            - make
 promotions:
   - name: Production Deployment
     pipeline_file: pipeline_2.yml
