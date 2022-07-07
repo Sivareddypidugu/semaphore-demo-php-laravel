@@ -77,7 +77,7 @@ blocks:
             - 'git clone https://github.com/sensiolabs/security-checker.git'
             - cd security-checker
             - composer install
-            - artifact push job logs
+            - artifact push job
       prologue:
         commands:
           - cache restore
